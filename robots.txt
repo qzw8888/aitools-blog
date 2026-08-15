@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qzw8888.github.io/aitools-blog/sitemap.xml
