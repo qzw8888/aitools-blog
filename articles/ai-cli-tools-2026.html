@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="These command-line AI tools run in your terminal, integrate with any workflow, and cost nothing to run locally. The complete 2026 comparison.">
+    <title>Best AI CLI Tools for Developers in 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0a0a0f; color: #e4e4e7; line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; border-bottom: 1px solid #1f1f2e; position: sticky; top: 0; background: rgba(10,10,15,0.97); backdrop-filter: blur(12px); z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #fff; text-decoration: none; }
+        .logo span { color: #f97316; }
+        nav { display: flex; gap: 28px; }
+        nav a { color: #a1a1aa; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        nav a:hover { color: #f97316; }
+        .article-content { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+        .article-content h1 { font-size: 2.2rem; margin-bottom: 8px; color: #fff; }
+        .article-meta-bar { display: flex; gap: 12px; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #1f1f2e; }
+        .category-tag { background: rgba(249,115,22,0.15); color: #f97316; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .date { color: #71717a; font-size: 0.85rem; align-self: center; }
+        .article-content h2 { color: #fff; font-size: 1.5rem; margin: 36px 0 16px; }
+        .article-content h3 { color: #fff; font-size: 1.15rem; margin: 28px 0 12px; }
+        .article-content p { color: #a1a1aa; font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
+        .article-content ul, .article-content ol { color: #a1a1aa; margin: 16px 0 20px 24px; }
+        .article-content li { margin-bottom: 8px; line-height: 1.7; }
+        .article-content pre { background: #13131a; border: 1px solid #1f1f2e; border-radius: 8px; padding: 16px; overflow-x: auto; margin: 20px 0; font-size: 0.85rem; color: #e4e4e7; font-family: 'Courier New', monospace; }
+        .article-content code { background: #13131a; color: #f97316; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+        .article-content pre code { background: none; padding: 0; color: #e4e4e7; }
+        .article-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .article-content th, .article-content td { padding: 10px 14px; border: 1px solid #1f1f2e; text-align: left; font-size: 0.9rem; }
+        .article-content th { background: #13131a; color: #f97316; }
+        .article-content strong { color: #fff; }
+        .article-content a { color: #f97316; }
+        .back-link { display: inline-block; margin-bottom: 24px; color: #f97316; text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+        footer { padding: 40px 0; border-top: 1px solid #1f1f2e; text-align: center; color: #71717a; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">AI<span>Code</span>Tools</a>
+                <nav>
+                    <a href="../index.html">All Tools</a>
+                    <a href="../index.html">Comparisons</a>
+                    <a href="../index.html">Beginners</a>
+                    <a href="../index.html">VS Code Extensions</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="article-content">
+        <a href="../index.html" class="back-link">← Back to all tools</a>
+        <h1>Best AI CLI Tools for Developers in 2026</h1>
+        <div class="article-meta-bar">
+            <span class="category-tag">CLI Tools</span>
+            <span class="date">2026-08-20</span>
+        </div>
+        <div class="prose">
+            Most AI coding tools need a GUI. These don't.
+            
+            Here are the command-line AI tools I actually install on every new machine — and exactly when to use each one.
+            
+            ## Why CLI AI Tools?
+            
+            - **Fastest workflow**: No context switching, stay in terminal
+            - **Scriptable**: Integrate into CI/CD, git hooks, build scripts
+            - **Lightweight**: No Electron overhead, runs on remote servers via SSH
+            - **Scriptable**: Pipe output to other tools, chain commands
+            
+            ## 1. GitHub Copilot CLI (`github-copilot-cli`)
+            
+            The official CLI for GitHub Copilot. Ask natural language questions about shell commands.
+            
+            ```bash
+            # What it does: explains and generates shell commands
+            $ gh copilot "find all node_modules folders larger than 100MB"
+            # → Explains: "I'll search for node_modules directories and check their size"
+            # → Suggests: find . -name "node_modules" -type d -exec du -sh {} \; 2>/dev/null | sort -rh
+            ```
+            
+            Install:
+            ```bash
+            npm install -g @githubnext/github-copilot-cli
+            ```
+            
+            Best for: Translating "do X in bash" into actual commands you can copy-paste.
+            
+            ## 2. Aider — AI Coding in Your Terminal
+            
+            `aider` is a full AI coding assistant that works directly in your terminal. Connect it to Claude, GPT-4, or local models.
+            
+            ```bash
+            # Start a coding session
+            aider --model claude-3-5-sonnet
+            
+            # Ask it to add a feature
+            /aider: Add rate limiting to this API using in-memory cache
+            
+            # It reads your files, makes the changes, shows you a diff
+            ```
+            
+            Key features:
+            - Works with any LLM via OpenAI-compatible API
+            - `aider --openai-api-base` for custom endpoints
+            - Git-aware: commits changes with sensible messages
+            - Multi-file edits in one session
+            
+            ```bash
+            # Quick start
+            pip install aider-chat
+            aider app.py  # opens one file
+            aider src/    # opens entire directory
+            ```
+            
+            ## 3. Shell GPT (sgpt)
+            
+            A ChatGPT interface for the shell. Not just command generation — full chat capability.
+            
+            ```bash
+            # Generate and run a command (with confirmation)
+            sgpt --shell "show me the largest files in /var/log"
+            
+            # Quick answer
+            sgpt "explain what this cron expression does: 0 */2 * * *"
+            
+            # Pipe-friendly
+            cat error.log | sgpt "what might cause these errors"
+            ```
+            
+            ```bash
+            # Install
+            pip install shell-gpt
+            export OPENAI_API_KEY=your-key
+            ```
+            
+            Best for: One-off questions, quick command generation, log analysis.
+            
+            ## 4. Continue (Continue.dev CLI)
+            
+            The open-source alternative to Cursor — now with CLI support. Works as a VS Code extension AND a standalone CLI.
+            
+            ```bash
+            # Start a Continue session
+            continue --llm claude
+            
+            # Or with local Ollama
+            continue --llm ollama/codellama
+            ```
+            
+            Best for: Self-hosted options, local models, privacy-sensitive code.
+            
+            ## 5. CodeGPT (for Neovim/Vim)
+            
+            If you're a terminal-first developer, CodeGPT brings AI completions to Neovim:
+            
+            ```lua
+            -- In your init.lua or lazy.nvim config
+            use {
+              "dpayne/CodeGPT.nvim",
+              requires = "plenary.nvim",
+              config = function()
+                require("CodeGPT").setup({
+                  api_key_env_var = "OPENAI_API_KEY",
+                  model = "gpt-4-turbo",
+                })
+              end
+            }
+            ```
+            
+            Key commands:
+            - `:CodeGPTChat` — Open chat panel
+            - `:CodeGPTExplain` — Explain selected code
+            - `:CodeGTPRefactor` — Refactor selected code
+            
+            ## 6. Ollama — Local AI Models
+            
+            Not an AI tool itself, but the backbone for running AI locally. Free, private, no API costs.
+            
+            ```bash
+            # Install and run models
+            ollama pull codellama
+            ollama pull mixtral
+            ollama pull llama3
+            
+            # Use with any OpenAI-compatible tool
+            export OPENAI_API_BASE=http://localhost:11434/v1
+            export OPENAI_API_KEY=ollama
+            
+            # Then use with aider, shell-gpt, anything
+            aider --model ollama/codellama
+            ```
+            
+            Best for: Privacy, offline work, cost savings on repetitive tasks.
+            
+            ## 7. Docker + Continue for Remote Coding
+            
+            SSH into a remote server? Run Continue there:
+            
+            ```bash
+            ssh my-server
+            continue --llm ollama/codellama
+            
+            # Now you have AI assistance on a remote machine
+            # with zero latency to local files
+            ```
+            
+            ## 8. Smithery CLI — Install Tools for Claude
+            
+            Smithery lets you run Claude Desktop tools in the CLI:
+            
+            ```bash
+            npx @smithery/cli run @github/github -c "summarize this repo"
+            ```
+            
+            Best for: Accessing Claude Code capabilities without Claude subscription.
+            
+            ## My Actual Setup
+            
+            ```
+            Terminal workflow:
+            ├── sgpt          → quick shell command questions
+            ├── aider         → multi-file coding sessions  
+            └── ollama        → local model for privacy work
+            
+            VS Code workflow:
+            └── GitHub Copilot → inline completions + chat
+            ```
+            
+            ## Performance Comparison
+            
+            | Tool | Latency | Cost | Privacy | Best For |
+            |------|---------|------|---------|----------|
+            | GitHub Copilot CLI | Fast | Subscription | Cloud | Command generation |
+            | Aider + Claude | Medium | API cost | Cloud | Full coding sessions |
+            | Shell GPT | Fast | API cost | Cloud | One-off questions |
+            | Ollama + Aider | Medium | Free | 100% Local | Privacy, cost savings |
+            | Continue | Fast | API cost | Cloud | VS Code users |
+            
+            ## The Combo That Works
+            
+            ```bash
+            # Install everything in 5 minutes
+            npm install -g @githubnext/github-copilot-cli
+            pip install aider-chat shell-gpt
+            brew install ollama && ollama pull mixtral
+            
+            # Configure aliases in .bashrc/.zshrc
+            alias cop="gh copilot"
+            alias ask="sgpt"
+            alias code="aider"
+            ```
+            
+            ## Verdict
+            
+            - **Start here**: `sgpt` + `ollama` — free, fast, works offline
+            - **For serious coding**: `aider` with Claude or GPT-4
+            - **Daily driver**: GitHub Copilot CLI for command generation
+            
+            The best CLI tool is the one you actually use. Start with one, build the habit, add the second.
+            
+            ---
+            
+            *These tools work great with [Cursor AI](https://www.cursor.so) — GUI + CLI together covers 95% of my coding needs.*
+        </div>
+        <div style="margin-top:48px;padding:24px;background:#13131a;border-radius:8px;border:1px solid rgba(249,115,22,0.25);">
+            <p style="color:#a1a1aa;font-size:0.9rem;margin-bottom:12px;">Looking for more AI coding tools?</p>
+            <a href="../index.html" style="color:#f97316;text-decoration:none;font-weight:600;">Browse all AI coding tools →</a>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Content is reader-supported. Affiliate links help support this site.</p>
+        </div>
+    </footer>
+</body>
+</html>
