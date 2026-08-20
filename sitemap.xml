@@ -6,4 +6,14 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://qzw8888.github.io/aitools-blog/articles/cursor-ai-features-2026.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://qzw8888.github.io/aitools-blog/articles/ai-cli-tools-2026.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
