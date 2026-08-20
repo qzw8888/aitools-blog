@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="These 15 Cursor AI features will change how you code. From Ctrl+K to Agent Mode — the features that actually save hours of work.">
+    <title>15 Cursor AI Features I Actually Use Every Day (2026)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0a0a0f; color: #e4e4e7; line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; border-bottom: 1px solid #1f1f2e; position: sticky; top: 0; background: rgba(10,10,15,0.97); backdrop-filter: blur(12px); z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #fff; text-decoration: none; }
+        .logo span { color: #f97316; }
+        nav { display: flex; gap: 28px; }
+        nav a { color: #a1a1aa; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        nav a:hover { color: #f97316; }
+        .article-content { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+        .article-content h1 { font-size: 2.2rem; margin-bottom: 8px; color: #fff; }
+        .article-meta-bar { display: flex; gap: 12px; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #1f1f2e; }
+        .category-tag { background: rgba(249,115,22,0.15); color: #f97316; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .date { color: #71717a; font-size: 0.85rem; align-self: center; }
+        .article-content h2 { color: #fff; font-size: 1.5rem; margin: 36px 0 16px; }
+        .article-content h3 { color: #fff; font-size: 1.15rem; margin: 28px 0 12px; }
+        .article-content p { color: #a1a1aa; font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
+        .article-content ul, .article-content ol { color: #a1a1aa; margin: 16px 0 20px 24px; }
+        .article-content li { margin-bottom: 8px; line-height: 1.7; }
+        .article-content pre { background: #13131a; border: 1px solid #1f1f2e; border-radius: 8px; padding: 16px; overflow-x: auto; margin: 20px 0; font-size: 0.85rem; color: #e4e4e7; font-family: 'Courier New', monospace; }
+        .article-content code { background: #13131a; color: #f97316; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+        .article-content pre code { background: none; padding: 0; color: #e4e4e7; }
+        .article-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .article-content th, .article-content td { padding: 10px 14px; border: 1px solid #1f1f2e; text-align: left; font-size: 0.9rem; }
+        .article-content th { background: #13131a; color: #f97316; }
+        .article-content strong { color: #fff; }
+        .article-content a { color: #f97316; }
+        .back-link { display: inline-block; margin-bottom: 24px; color: #f97316; text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+        footer { padding: 40px 0; border-top: 1px solid #1f1f2e; text-align: center; color: #71717a; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">AI<span>Code</span>Tools</a>
+                <nav>
+                    <a href="../index.html">All Tools</a>
+                    <a href="../index.html">Comparisons</a>
+                    <a href="../index.html">Beginners</a>
+                    <a href="../index.html">VS Code Extensions</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="article-content">
+        <a href="../index.html" class="back-link">← Back to all tools</a>
+        <h1>15 Cursor AI Features I Actually Use Every Day (2026)</h1>
+        <div class="article-meta-bar">
+            <span class="category-tag">Cursor AI</span>
+            <span class="date">2026-08-20</span>
+        </div>
+        <div class="prose">
+            Most people use Cursor for autocomplete. That's like buying a sports car to drive to the grocery store.
+            
+            After a year of daily use, here are the 15 features that actually save me time — in order of how often I reach for them.
+            
+            ## 1. Ctrl+K Inline Edit (My #1 Feature)
+            
+            Select any block of code, hit `Ctrl+K`, and type what you want it to do. Cursor rewrites just that selection.
+            
+            ```javascript
+            // Before: manual rewrite
+            function formatDate(date) {
+              const d = new Date(date);
+              return d.getMonth() + '/' + d.getDate() + '/' + d.getFullYear();
+            }
+            
+            // After: Ctrl+K → "convert to ISO locale string"
+            // Just works, correctly
+            function formatDate(date) {
+              return new Date(date).toLocaleDateString('en-US');
+            }
+            ```
+            
+            No copy-paste, no context switching. It's the fastest refactor tool I've used.
+            
+            ## 2. Ctrl+L Whole-Project Context
+            
+            `Ctrl+L` isn't just a chat — it has your entire project in context. Try:
+            
+            > "Where do we handle authentication errors? Show me the relevant files."
+            
+            It finds patterns across your whole codebase, not just one file.
+            
+            ## 3. Cmd+K with @Files for Context
+            
+            Use `@filename` to pull in specific files for a task:
+            
+            > "@auth.js @userController.js — the registration flow is missing email verification. Add it."
+            
+            Cursor reads both files, understands the existing patterns, and writes code that matches your codebase style.
+            
+            ## 4. Tab Completion with Predictor Mode
+            
+            Cursor's Tab (`Tab`) key has three modes:
+            - **Default**: Next token prediction
+            - **Hyp Autocomplete** (default now): Full line/smell prediction using your project context
+            - **Agent Tab**: Actually completes multi-step tasks
+            
+            Keep Tab pressed and it keeps predicting. For boilerplate it's genuinely faster than typing.
+            
+            ## 5. Cmd+K with "Write Tests"
+            
+            Select a function, `Cmd+K`, type "write tests for edge cases including null input and empty array." It writes actual Jest/Vitest tests, not stubs.
+            
+            ## 6. Whole Project Search via Cmd+L
+            
+            > "We have 3 different date formatting utilities across this project. Show me all of them."
+            
+            Cursor will find and list every instance with file paths. Then you can ask it to consolidate them into one utility.
+            
+            ## 7. Apply Refactors Across Multiple Files
+            
+            This one is underrated. After asking Cursor to refactor, it can apply the change across every relevant file in your project — not just the one you're looking at.
+            
+            Ask: "Use this new error handling pattern in every API route file."
+            
+            ## 8. Inline Bug Detection
+            
+            Cursor's debugger view shows inline annotations on lines where exceptions might occur — before you even run the code. It's like having a senior dev reviewing every line as you write it.
+            
+            ## 9. Diff View for AI Edits
+            
+            When Cursor proposes a change via `Ctrl+K`, you see a red/green diff before accepting. Nothing is forced on you.
+            
+            ## 10. Git Commit Messages via Cmd+L
+            
+            Ask: "Generate a commit message for the changes in this diff." It reads your git diff and writes a proper Conventional Commits message.
+            
+            ## 11. CMD+Enter for Batch Apply
+            
+            After `Cmd+K` generates multiple suggestions, `Cmd+Enter` applies them all at once. Useful for bulk refactors.
+            
+            ## 12. Context Memory Across Sessions
+            
+            Cursor remembers your conversation. Ask follow-up questions without re-explaining the codebase. "Continue from where we left off" actually works.
+            
+            ## 13. Web Search Integration
+            
+            Ask Cursor: "What's the latest React 19 recommended pattern for form handling?" It searches the web and cites sources. No more tab-switching to check docs.
+            
+            ## 14. Agent Mode for Multi-File Tasks
+            
+            Type `/agent` in the chat to enable full agent mode. It can:
+            - Read multiple files
+            - Write new files
+            - Run shell commands
+            - Apply changes to disk
+            
+            Perfect for "Add dark mode to this entire component library."
+            
+            ## 15. Inline Chat (`Ctrl+I`)
+            
+            Instead of a separate chat panel, `Ctrl+I` opens a chat inline at your cursor position. Best of both worlds — chat context with positional awareness.
+            
+            ---
+            
+            ## My Daily Workflow
+            
+            1. Open project → `Ctrl+L` to get oriented if it's been a while
+            2. Write code, use Tab for autocomplete
+            3. Hit `Ctrl+K` for any refactor or new feature
+            4. Ask `Cmd+L` for cross-file analysis or bug hunting
+            5. Use `/agent` for multi-file refactors
+            6. `Ctrl+I` for quick questions without switching context
+            
+            The key insight: **treat Cursor as a pair programmer who never gets tired and already knows your codebase.**
+            
+            ## What Cursor Can't Do (Yet)
+            
+            - Replace understanding of business logic
+            - Handle truly ambiguous requirements (you still need to think)
+            - Run your code — you still need to test
+            
+            But for the 80% of coding that's pattern-based, Cursor 0.4+ has become genuinely essential for my workflow.
+            
+            ---
+            
+            *Using my affiliate link helps support more honest tool reviews at no cost to you: [cursor.so](https://www.cursor.so)* (affiliate)
+        </div>
+        <div style="margin-top:48px;padding:24px;background:#13131a;border-radius:8px;border:1px solid rgba(249,115,22,0.25);">
+            <p style="color:#a1a1aa;font-size:0.9rem;margin-bottom:12px;">Looking for more AI coding tools?</p>
+            <a href="../index.html" style="color:#f97316;text-decoration:none;font-weight:600;">Browse all AI coding tools →</a>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Content is reader-supported. Affiliate links help support this site.</p>
+        </div>
+    </footer>
+</body>
+</html>
